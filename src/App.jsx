@@ -5,6 +5,7 @@ import Players from "./components/Players"
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
 import SinglePlayer from "./components/SinglePlayer"
+
 function App() {
   const claimCoins = () =>  toast.success("Congrats! You claimed 1 crore coins 🎉", {theme: "colored"});
   const warning = () => toast.error("Free credit already claimed.",{theme: 'colored' })
@@ -14,7 +15,6 @@ function App() {
   const [players, setPlayers] = useState ([])
   const [coin, setCoin] = useState(0)
   const [notify, setNotify] = useState(false)
-  const[price, setPrice] = useState(0)
   const checkCoin = (e)=>{
       let selectPrice = 0
       const selectProductId = e.target.id
@@ -62,7 +62,7 @@ useEffect(()=>{
     <ToastContainer />
     <div className="w-10/12 mx-auto grid grid-cols-3 gap-4">
     {
-      players.map((player, idx)=> <SinglePlayer id={idx} key={idx} name={player.name} image={player.image} price = {player.price} checkCoin={(e)=>checkCoin(e)} />)
+      players.map((player, idx)=> <SinglePlayer id={idx} key={idx} name={player.name} image={player.image} price = {player.price} checkCoin={(e)=>checkCoin(e)} country={player.country} battingStyle={player.battingStyle} role = {player.role} ratings={player.rating} />)
     }
     </div>
     

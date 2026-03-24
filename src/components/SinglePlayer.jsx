@@ -1,5 +1,8 @@
-function SinglePlayer({name, image, price, checkCoin, id}) {
-  return (
+import { Rating } from '@smastrom/react-rating'
+import { useState } from 'react'
+function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle, role, ratings}) {
+  const [rating, setRating] = useState(2)
+    return (
     <div>
        <div className='rounded-lg border-2 border-gray-300 overflow-hidden '>
         <img className='rounded-2xl mb-6 w-11/12 mx-auto mt-4 h-70' src={image} alt="" />
@@ -14,19 +17,20 @@ function SinglePlayer({name, image, price, checkCoin, id}) {
             <div className="image">
                 <img src="./src/assets/report 1.png" alt="" />
             </div>
-            <h1>Bangladesh</h1>
+            <h1>{country}</h1>
             </div>
             <div className="rightContent bg-gray-100 px-3.5 py-2.25 rounded-lg">
-                <h1>All-rounder</h1>
+                <h1>{role}</h1>
             </div>
         </div>
         <div className="endContent w-11/12 mx-auto space-y-3 mb-4">
             <div className="ratings">
-                <h1 className="text-xl font-bold">Ratings</h1>
+                <h1 className="text-lg font-bold">Ratings ({ratings})</h1>
+      
             </div>
             <div className="hand flex justify-between items-center">
-                <h1 className="text-lg font-bold">Left-Hand-Bat</h1>
-                <h1 className="text-lg">Left-Hand-Bat</h1>
+                <h1 className="text-lg font-bold">{battingStyle}</h1>
+                <h1 className="text-lg">{battingStyle}</h1>
             </div>
             <div className="price flex justify-between items-center">
                 <h1 className="font-bold text-lg">Price: ${price}</h1>
