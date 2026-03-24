@@ -11,7 +11,7 @@ const Players = () => {
        selectedBtn.classList.add('font-bold') 
     }
   return (
-    <div className="w-10/12 mx-auto mt-25">
+    <div className="w-10/12 mx-auto mt-25 mb-8">
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-2xl">Available Players</h1>
         <div className="allbutton border border-gray-300 rounded-2xl">

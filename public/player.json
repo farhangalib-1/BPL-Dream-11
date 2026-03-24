@@ -1,6 +1,7 @@
 [
   {
     "name": "Virat Kohli",
+    "image" : "https://admin.thecricketer.com/weblab/sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/kohli231007.jpg",
     "country": "India",
     "role": "Batsman",
     "battingStyle": "Right-Hand-Bat",
@@ -9,6 +10,7 @@
   },
   {
     "name": "Babar Azam",
+    "image": "https://blogs.a-sports.tv/wp-content/uploads/2025/11/babar.png",
     "country": "Pakistan",
     "role": "Batsman",
     "battingStyle": "Right-Hand-Bat",
@@ -17,6 +19,7 @@
   },
   {
     "name": "Joe Root",
+    "image": "https://resources.ecb.co.uk/photo-resources/2024/12/09/b9f0f923-f544-459f-8f71-bcd1dfcf29fd/GettyImages-2188210826.jpg?width=3736&height=2272",
     "country": "England",
     "role": "Batsman",
     "battingStyle": "Right-Hand-Bat",
@@ -25,6 +28,7 @@
   },
   {
     "name": "Kane Williamson",
+    "image": "https://blogs.a-sports.tv/wp-content/uploads/2025/04/karachi-kings-kane-williamson-reveals-favourite-pakistani-food.jpg",
     "country": "New Zealand",
     "role": "Batsman",
     "battingStyle": "Right-Hand-Bat",
@@ -33,6 +37,7 @@
   },
   {
     "name": "Steve Smith",
+    "image": "https://c.ndtvimg.com/2025-01/779p0q78_steve-smith-afp_625x300_29_January_25.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
     "country": "Australia",
     "role": "Batsman",
     "battingStyle": "Right-Hand-Bat",
@@ -41,6 +46,7 @@
   },
   {
     "name": "Shakib Al Hasan",
+    "image": "https://blogs.a-sports.tv/wp-content/uploads/2024/08/Shakib-Al-Hasan-booed-by-Bangladesh-fans-amid-political-unrest.jpg",
     "country": "Bangladesh",
     "role": "All-Rounder",
     "battingStyle": "Left-Hand-Bat",
@@ -49,6 +55,7 @@
   },
   {
     "name": "Ben Stokes",
+    "image": "https://www.radionewshub.com/_media/images/news/categories/01JFTFJF7T4PWDV79K7KH45NJY-2a70a2.jpg",
     "country": "England",
     "role": "All-Rounder",
     "battingStyle": "Left-Hand-Bat",
@@ -57,6 +64,7 @@
   },
   {
     "name": "Hardik Pandya",
+    "image": "https://pbs.twimg.com/media/GkDrhkhaAAAI3Qt.jpg",
     "country": "India",
     "role": "All-Rounder",
     "battingStyle": "Right-Hand-Bat",
@@ -65,6 +73,7 @@
   },
   {
     "name": "Rashid Khan",
+    "image": "https://blogs.a-sports.tv/wp-content/uploads/2025/04/rashid-khan.png",
     "country": "Afghanistan",
     "role": "Bowler",
     "battingStyle": "Right-Hand-Bat",
@@ -73,6 +82,7 @@
   },
   {
     "name": "Trent Boult",
+    "image": "https://admin.thecricketer.com/weblab/sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/trentboultheadshot-min.jpg",
     "country": "New Zealand",
     "role": "Bowler",
     "battingStyle": "Right-Hand-Bat",
@@ -81,6 +91,7 @@
   },
   {
     "name": "Jasprit Bumrah",
+    "image": "https://www.aljazeera.com/wp-content/uploads/2024/12/AFP__20241122__36N39GM__v1__HighRes__CricketAusInd-1733131187.jpg?resize=770%2C513&quality=80",
     "country": "India",
     "role": "Bowler",
     "battingStyle": "Right-Hand-Bat",
@@ -89,6 +100,7 @@
   },
   {
     "name": "Mitchell Starc",
+    "image": "https://menshealth.com.au/wp-content/uploads/2021/10/20250909174088708862-original-min-1280x853.jpg",
     "country": "Australia",
     "role": "Bowler",
     "battingStyle": "Left-Hand-Bat",
