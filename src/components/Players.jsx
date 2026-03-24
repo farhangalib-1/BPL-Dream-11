@@ -6,14 +6,10 @@ const Players = () => {
             btn.classList.remove('font-bold')
             btn.classList.add('text-gray-600')
         }
-        
        const selectedBtn = document.getElementById(e.target.id)
        selectedBtn.classList.add('bg-[#E7FE29]')
-       selectedBtn.classList.add('font-bold')
-       
-        
+       selectedBtn.classList.add('font-bold') 
     }
-
   return (
     <div className="w-10/12 mx-auto mt-25">
       <div className="flex justify-between items-center">

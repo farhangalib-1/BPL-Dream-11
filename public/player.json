@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.9,
+    "price": 1500000
+  },
+  {
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.8,
+    "price": 1400000
+  },
+  {
+    "name": "Joe Root",
+    "country": "England",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.7,
+    "price": 1350000
+  },
+  {
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.8,
+    "price": 1300000
+  },
+  {
+    "name": "Steve Smith",
+    "country": "Australia",
+    "role": "Batsman",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.7,
+    "price": 1450000
+  },
+  {
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "battingStyle": "Left-Hand-Bat",
+    "rating": 4.9,
+    "price": 1200000
+  },
+  {
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "battingStyle": "Left-Hand-Bat",
+    "rating": 4.8,
+    "price": 1250000
+  },
+  {
+    "name": "Hardik Pandya",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.6,
+    "price": 1100000
+  },
+  {
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Bowler",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.9,
+    "price": 1000000
+  },
+  {
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "role": "Bowler",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.7,
+    "price": 950000
+  },
+  {
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "role": "Bowler",
+    "battingStyle": "Right-Hand-Bat",
+    "rating": 4.9,
+    "price": 1050000
+  },
+  {
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "role": "Bowler",
+    "battingStyle": "Left-Hand-Bat",
+    "rating": 4.8,
+    "price": 1150000
+  }
+]

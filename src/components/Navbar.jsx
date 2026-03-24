@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({coin}) => {
   return (
     <div className="w-10/12 mx-auto flex justify-between items-center mt-4">
         <div className="left">
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <li>Schedules</li>
             </ul>
             <div className="end flex items-center gap-1 border border-gray-300 px-3 py-2 rounded-lg">
-            <h1 className="flex items-center gap-1 font-bold"> <span>0 </span> coin</h1>
+            <h1 className="flex items-center gap-1 font-bold"> <span> {coin} </span> coin</h1>
             <div className="coin">
             <img src="../src/assets/dollar 1.png" alt="" />
             </div>
