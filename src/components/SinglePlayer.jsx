@@ -1,7 +1,5 @@
-import { Rating } from '@smastrom/react-rating'
 import { useState } from 'react'
-function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle, role, ratings}) {
-  const [rating, setRating] = useState(2)
+function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle, role, ratings,}) {
     return (
     <div>
        <div className='rounded-lg border-2 border-gray-300 overflow-hidden '>
