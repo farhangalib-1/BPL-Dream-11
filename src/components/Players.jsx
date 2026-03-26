@@ -22,25 +22,8 @@ const Players = ({players, coin, setCoin}) => {
     }
   const warn = () => toast.error("You have no coins left.",{theme: 'colored' })
   const warn1 = ()=> toast.error("You need more coins to continue.",{theme: 'colored' })
-  const success = () => toast.success("Player added successfully 🎉", {theme: "colored"});
-  const checkCoin = (e)=>{
-      let selectPrice = 0
-      const selectProductId = e.target.id
-      const allPrice =  players.map(el=> el.price)
-      selectPrice = allPrice[selectProductId]
-      if(coin<=0){
-          warn();
-      }
-      else if(coin<selectPrice){
-        warn1();
-      }
-      else{
-        success();
-        const remainingCoin = coin - selectPrice;
-        setCoin(remainingCoin);
-      }
-      setIsSelect(true)
-  }
+  
+  
   
   return (
     <div className="w-10/12 mx-auto mt-25 mb-8">
@@ -53,7 +36,7 @@ const Players = ({players, coin, setCoin}) => {
       </div>
       {heading === 'Available Players' ?  <div className="grid grid-cols-3 gap-4">
     {
-      players.map((player, idx)=> <SinglePlayer coin={coin} id={idx} key={idx} name={player.name} image={player.image} price = {player.price} checkCoin={(e)=>checkCoin(e)} country={player.country} battingStyle={player.battingStyle} role = {player.role} ratings={player.rating} />)
+      players.map((player, idx)=> <SinglePlayer players={players}  coin={coin} setCoin={setCoin}  id={idx} key={idx} name={player.name} image={player.image} price = {player.price} checkCoin={(e)=>checkCoin(e)} country={player.country} battingStyle={player.battingStyle} role = {player.role} ratings={player.rating} />)
     }</div>  : <div>Selected Player</div>
     }
     </div>

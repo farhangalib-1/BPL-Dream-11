@@ -8,16 +8,9 @@ import { ToastContainer, toast } from 'react-toastify';
 function App() {
   const claimCoins = () =>  toast.success("Congrats! You claimed 1 crore coins 🎉", {theme: "colored"});
   const warning = () => toast.error("Free credit already claimed.",{theme: 'colored' })
-  const warn = () => toast.error("You have no coins left.",{theme: 'colored' })
-  const warn1 = ()=> toast.error("You need more coins to continue.",{theme: 'colored' })
-  const success = () => toast.success("Player added successfully 🎉", {theme: "colored"});
   const [players, setPlayers] = useState ([])
   const [coin, setCoin] = useState(0)
   const [notify, setNotify] = useState(false)
-  const [available, setAvailable] = useState(false)
-  const showAvailable = () =>{
-    setAvailable(true)
-  }
   
   const getCoin = ()=>{
     if(!notify){

@@ -1,9 +1,28 @@
 import { useState } from 'react'
-function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle, role, ratings, coin}) {
+import { ToastContainer, toast } from 'react-toastify';
+function SinglePlayer({players, name, image, price, id, country, battingStyle, role, ratings, coin, setCoin}) {
      const [isSelect, setIsSelect] = useState(false)
-     const buttonClick = () =>{
-            if(coin > 0) setIsSelect(true)
-     }
+      const success = () => toast.success(`${name} added successfully 🎉`, {theme: "colored"});
+       const warn = () => toast.error("You have no coins left.",{theme: 'colored' })
+        const warn1 = ()=> toast.error("You need more coins to continue.",{theme: 'colored' })
+     const checkCoin = (e)=>{
+      let selectPrice = 0
+      const selectProductId = e.target.id
+      const allPrice =  players.map(el=> el.price)
+      selectPrice = allPrice[selectProductId]
+      if(coin<=0){
+          warn();
+      }
+      else if(coin<selectPrice){
+        warn1();
+      }
+      else{
+        success();
+        const remainingCoin = coin - selectPrice;
+        setCoin(remainingCoin);
+        setIsSelect(true)
+      }
+  }
     return (
     <div>
        <div className='rounded-lg border-2 border-gray-300 overflow-hidden '>
@@ -36,8 +55,8 @@ function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle,
             </div>
             <div className="price flex justify-between items-center">
                 <h1 className="font-bold text-lg">Price: ${price}</h1>
-                <div onClick={buttonClick}>
-                <button  disabled={isSelect} id ={id} onClick={checkCoin} className="text-sm py-2.25 px-4 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 hover:font-semibold disabled:cursor-not-allowed disabled:bg-gray-200 ">{ isSelect ? 'Selected' : 'Choose Player'}</button>
+                <div>
+                <button  disabled={isSelect} id ={id} onClick={(e)=>{checkCoin(e)}} className="text-sm py-2.25 px-4 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 hover:font-semibold disabled:cursor-not-allowed disabled:bg-gray-200 ">{ isSelect ? 'Selected' : 'Choose Player'}</button>
                 </div>
             </div>
         </div>
