@@ -3,7 +3,6 @@ import SinglePlayer from "./SinglePlayer"
 import { ToastContainer, toast } from 'react-toastify';
 const Players = ({players, coin, setCoin}) => {
   const [heading, setHeading] = useState('Available Players')
-  const [isSelect, setIsSelect] = useState(false)
   const btnClick = (e)=>{
         const allBtns = document.querySelectorAll('.btn')
         for(let btn of allBtns ){
@@ -24,7 +23,6 @@ const Players = ({players, coin, setCoin}) => {
   const warn = () => toast.error("You have no coins left.",{theme: 'colored' })
   const warn1 = ()=> toast.error("You need more coins to continue.",{theme: 'colored' })
   const success = () => toast.success("Player added successfully 🎉", {theme: "colored"});
-    
   const checkCoin = (e)=>{
       let selectPrice = 0
       const selectProductId = e.target.id
@@ -41,6 +39,7 @@ const Players = ({players, coin, setCoin}) => {
         const remainingCoin = coin - selectPrice;
         setCoin(remainingCoin);
       }
+      setIsSelect(true)
   }
   
   return (
@@ -54,7 +53,7 @@ const Players = ({players, coin, setCoin}) => {
       </div>
       {heading === 'Available Players' ?  <div className="grid grid-cols-3 gap-4">
     {
-      players.map((player, idx)=> <SinglePlayer id={idx} key={idx} name={player.name} image={player.image} price = {player.price} checkCoin={(e)=>checkCoin(e)} country={player.country} battingStyle={player.battingStyle} role = {player.role} ratings={player.rating} />)
+      players.map((player, idx)=> <SinglePlayer coin={coin} id={idx} key={idx} name={player.name} image={player.image} price = {player.price} checkCoin={(e)=>checkCoin(e)} country={player.country} battingStyle={player.battingStyle} role = {player.role} ratings={player.rating} />)
     }</div>  : <div>Selected Player</div>
     }
     </div>

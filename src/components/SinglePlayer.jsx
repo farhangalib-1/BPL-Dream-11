@@ -1,5 +1,9 @@
 import { useState } from 'react'
-function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle, role, ratings,}) {
+function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle, role, ratings, coin}) {
+     const [isSelect, setIsSelect] = useState(false)
+     const buttonClick = () =>{
+            if(coin > 0) setIsSelect(true)
+     }
     return (
     <div>
        <div className='rounded-lg border-2 border-gray-300 overflow-hidden '>
@@ -32,7 +36,9 @@ function SinglePlayer({name, image, price, checkCoin, id, country, battingStyle,
             </div>
             <div className="price flex justify-between items-center">
                 <h1 className="font-bold text-lg">Price: ${price}</h1>
-                <button id ={id} onClick={checkCoin} className="text-sm py-2.25 px-4 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 hover:font-semibold">Choose Player</button>
+                <div onClick={buttonClick}>
+                <button  disabled={isSelect} id ={id} onClick={checkCoin} className="text-sm py-2.25 px-4 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 hover:font-semibold disabled:cursor-not-allowed disabled:bg-gray-200 ">{ isSelect ? 'Selected' : 'Choose Player'}</button>
+                </div>
             </div>
         </div>
     </div>
