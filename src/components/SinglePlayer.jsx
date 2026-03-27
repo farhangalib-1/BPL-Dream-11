@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
-function SinglePlayer({players, name, image, price, id, country, battingStyle, role, ratings, coin, setCoin}) {
-     const [isSelect, setIsSelect] = useState(false)
-      const success = () => toast.success(`${name} added successfully 🎉`, {theme: "colored"});
-       const warn = () => toast.error("You have no coins left.",{theme: 'colored' })
-        const warn1 = ()=> toast.error("You need more coins to continue.",{theme: 'colored' })
-     const checkCoin = (e)=>{
+function SinglePlayer({players, name, image, price, id, country, battingStyle, role, ratings, coin, setCoin, selectedPlayers, setSelectedPlayers, player}) {
+    const isSelect = selectedPlayers.some(p => p.name === player.name)
+    const success = () => toast.success(`${name} added successfully 🎉`, {theme: "colored"});
+    const warn = () => toast.error("You have no coins left.",{theme: 'colored' })
+    const warn1 = ()=> toast.error("You need more coins to continue.",{theme: 'colored' })
+    const checkCoin = (e)=>{
       let selectPrice = 0
       const selectProductId = e.target.id
       const allPrice =  players.map(el=> el.price)
@@ -20,13 +20,14 @@ function SinglePlayer({players, name, image, price, id, country, battingStyle, r
         success();
         const remainingCoin = coin - selectPrice;
         setCoin(remainingCoin);
-        setIsSelect(true)
-      }
+        setSelectedPlayers([...selectedPlayers, player])
+      }   
   }
+
     return (
     <div>
        <div className='rounded-lg border-2 border-gray-300 overflow-hidden '>
-        <img className='rounded-2xl mb-6 w-11/12 mx-auto mt-4 h-70' src={image} alt="" />
+        <img className='playerImage rounded-2xl mb-6 w-11/12 mx-auto mt-4 h-70' src={image} alt="" />
         <div className="topContent w-11/12 mx-auto flex items-center gap-4">
             <div className="image">
                 <img src="./src/assets/user 1.png" alt="" />
@@ -56,7 +57,7 @@ function SinglePlayer({players, name, image, price, id, country, battingStyle, r
             <div className="price flex justify-between items-center">
                 <h1 className="font-bold text-lg">Price: ${price}</h1>
                 <div>
-                <button  disabled={isSelect} id ={id} onClick={(e)=>{checkCoin(e)}} className="text-sm py-2.25 px-4 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-200 hover:font-semibold disabled:cursor-not-allowed disabled:bg-gray-200 ">{ isSelect ? 'Selected' : 'Choose Player'}</button>
+                <button  disabled={isSelect} id ={id} onClick={(e)=>{checkCoin(e)}} className="text-sm py-2.25 px-4 rounded-lg border border-gray-300 cursor-pointer  disabled:cursor-not-allowed disabled:font-semibold disabled:bg-gray-100 disabled:text-gray-500 hover:bg-gray-200">{ isSelect ? 'Selected' : 'Choose Player'}</button>
                 </div>
             </div>
         </div>

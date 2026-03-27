@@ -11,6 +11,7 @@ function App() {
   const [players, setPlayers] = useState ([])
   const [coin, setCoin] = useState(0)
   const [notify, setNotify] = useState(false)
+  const [selectedPlayers, setSelectedPlayers] = useState([])
   
   const getCoin = ()=>{
     if(!notify){
@@ -34,7 +35,7 @@ useEffect(()=>{
     <>
     <Navbar coin={coin} />
     <HeroBg getCoin ={getCoin} />
-    <Players players={players} coin={coin} setCoin={setCoin} />
+    <Players players={players} coin={coin} setCoin={setCoin} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} />
     <ToastContainer />
    
     </>
