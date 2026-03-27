@@ -9,7 +9,7 @@ const Selected = ({selectedPlayers, setSelectedPlayers}) => {
     {
       selectedPlayers.length === 0 ? 
       <div className="">
-        <h1 className="text-center font-bold text-5xl">No player is selected </h1>
+        <h1 className="text-center font-bold text-xl md:text-5xl">No player is selected </h1>
       </div>: 
       <div>
       {
