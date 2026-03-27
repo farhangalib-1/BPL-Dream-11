@@ -5,8 +5,13 @@ const Selected = ({selectedPlayers, setSelectedPlayers}) => {
   setSelectedPlayers(filterData)
 }
   return (
- 
-    <div>
+    <>
+    {
+      selectedPlayers.length === 0 ? 
+      <div className="">
+        <h1 className="text-center font-bold text-5xl">No player is selected </h1>
+      </div>: 
+      <div>
       {
         selectedPlayers.map((el, idx)=>
           <div key={idx} className="border mb-4 rounded-2xl border-gray-200 p-6">
@@ -26,6 +31,9 @@ const Selected = ({selectedPlayers, setSelectedPlayers}) => {
         )
       }
     </div>
+    }
+    </>
+    
 
   )
 }

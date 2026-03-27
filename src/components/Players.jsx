@@ -14,7 +14,7 @@ const Players = ({players, coin, setCoin, selectedPlayers, setSelectedPlayers}) 
           setHeading('Available Players')
        }
        else{
-        setHeading(`Selected Players ${selectedPlayers.length} / ${players.length} `)
+        setHeading(`Selected Players`)
        }
        const selectedBtn = document.getElementById(e.target.id)
        selectedBtn.classList.add('bg-[#E7FE29]')
