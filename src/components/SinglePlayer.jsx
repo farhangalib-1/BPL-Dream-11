@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 function SinglePlayer({players, name, image, price, id, country, battingStyle, role, ratings, coin, setCoin, selectedPlayers, setSelectedPlayers, player}) {
     const isSelect = selectedPlayers.some(p => p.name === player.name)

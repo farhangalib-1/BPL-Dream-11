@@ -1,5 +1,5 @@
 import { Trash2 } from "lucide-react"
-const Selected = ({selectedPlayers, setSelectedPlayers}) => {
+const Selected = ({selectedPlayers, setSelectedPlayers, showAvailable}) => {
   const deleteData = (name) => {
   const filterData = selectedPlayers.filter(p => p.name !== name)
   setSelectedPlayers(filterData)
@@ -30,8 +30,13 @@ const Selected = ({selectedPlayers, setSelectedPlayers}) => {
           </div>
         )
       }
+      <div className=" border w-fit p-1 rounded-2xl">
+      <button onClick={showAvailable} className="bg-[#E7FE29] py-3.5 px-5 rounded-2xl font-bold cursor-pointer ">Add More Player</button>
     </div>
+    </div>
+    
     }
+  
     </>
     
 
