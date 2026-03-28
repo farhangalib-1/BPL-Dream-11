@@ -9,7 +9,8 @@ const Selected = ({selectedPlayers, setSelectedPlayers, showAvailable}) => {
     {
       selectedPlayers.length === 0 ? 
       <div className="">
-        <h1 className="text-center font-bold text-xl md:text-5xl">No player is selected </h1>
+        <h1 className="text-center font-semibold text-gray-400 text-xl md:text-2xl">No player Selected Yet </h1>
+        <p className="text-center text-gray-400">Go to available tab to select players</p>
       </div>: 
       <div>
       {
